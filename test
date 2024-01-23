@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Einladung</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0eae0;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #d35400;
+        }
+
+        button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #yesButton {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        #yesButton:hover {
+            background-color: #2ecc71;
+        }
+
+        #noButton {
+            background-color: #c0392b;
+            color: white;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        #noButton:hover {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <h2>Möchtest du mit mir auf ein Date gehen?</h2>
+    <button id="yesButton">Ja, gerne!</button>
+    <button id="noButton">Nein, danke</button>
+
+    <script>
+        document.getElementById('yesButton').addEventListener('click', function() {
+            alert('Super! Ich freue mich darauf!');
+        });
+
+        document.getElementById('noButton').addEventListener('mouseover', function() {
+            this.style.transform = `translateX(${Math.random() * 500 - 250}px) translateY(${Math.random() * 500 - 250}px)`;
+        });
+    </script>
+</body>
+</html>
